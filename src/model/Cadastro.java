@@ -1,4 +1,4 @@
-package domain;
+package model;
 import java.util.Scanner;
 
 public class Cadastro {
@@ -9,17 +9,9 @@ public class Cadastro {
 
     Scanner scanner = new Scanner(System.in);
 
-    public Cadastro(){}
-
-    public void telaCadastro(){
-        System.out.println("-----sistema de cadastro java puro-----");
-
-        System.out.println("Digite seu nome:");
-        setNome(scanner.nextLine());
-
-        System.out.println("Digite sua senha:");
-        setSenha(scanner.nextLine());
-
+    public Cadastro(String dado, String dado1){
+        this.nome = dado;
+        this.senha = dado1;
     }
 
     public String getNome() {
@@ -44,5 +36,9 @@ public class Cadastro {
 
     public void setConteudoSalvo(String conteudoSalvo) {
         ConteudoSalvo = conteudoSalvo;
+    }
+
+    public String toString(){
+        return nome + ";" + senha;
     }
 }
